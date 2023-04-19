@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: pod
+metadata: 
+  name: multiple
+spec:
+  containers:
+    - image: nginx
+      name: nginx:v1
+    - image: almalinux
+      name: sidecar ##by default amla linux won't run we need to run some command
+      command: ["sleep","200"]
+      #so now we created a pod and stored nginx  and alma linux container
+      #pod has ine IP Adress

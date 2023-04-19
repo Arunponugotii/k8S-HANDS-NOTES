@@ -1,0 +1,20 @@
+Side-Car:
+Web server is busy with getting requests from user,so side car gonna
+ communicate with ELK and whatever the logs,metrics 
+ genarated by Actual container will will send them to ELK
+
+In pod all the container goona shares same network space and shared volumes.
+
+In Kubernetes (k8s), a sidecar is a container that runs in 
+the same pod as the main container and supports it by providing additional functionality. 
+Sidecar containers can help with tasks such as logging, monitoring, security, and networking.
+
+For example, a sidecar container could be
+ used to monitor the logs of the main container and forward them
+  to a centralized logging system. Another use case could be to provide encryption 
+  and decryption services for network traffic going in and out of the main container.
+
+The sidecar container is able to share the same network and file 
+system as the main container, making it easier to provide these additional
+ functionalities without having to modify the main container itself.
+
